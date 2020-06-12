@@ -1,0 +1,22 @@
+::ng-deep mat-form-field {
+  width: 100%;
+
+  .mat-form-field-infix {
+    border-top: none;
+  }
+
+  &.mat-form-field-appearance-outline {
+    color: #000 !important;
+
+    &.mat-focused {
+      .mat-form-field-outline-thick {
+        color: #000 !important;
+      }
+    }
+
+    .mat-form-field-outline {
+      color: #000;
+    }
+
+  }
+}

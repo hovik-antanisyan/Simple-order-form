@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Create new Order</h1>
+
+  <form
+    [formGroup]="orderForm"
+    fxLayout.lt-sm="column"
+    fxLayout.gt-xs="row wrap"
+    fxLayoutGap="1rem"
+    fxLayoutGap.lt-sm="0"
+    (ngSubmit)="onSubmit()"
+  >
+    <div fxFlex="0 1 calc(50%-1rem)" fxFlex.lt-sm="100%">
+      <label for="orderName">Order name</label>
+      <mat-form-field appearance="outline" floatLabel="never">
+        <input formControlName="orderName" matInput placeholder="Caption" id="orderName">
+        <mat-error *ngIf="orderForm.controls.orderName?.errors?.required">Field is required</mat-error>
+        <mat-error *ngIf="orderForm.controls.orderName?.errors?.minlength ||
+         orderForm.controls.orderName?.errors?.maxlength">Value should be between 5 and 20
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="0 1 50%" class="no-margin" fxFlex.lt-sm="100%">
+      <label for="purchaseOrder">Purchase order</label>
+      <mat-form-field appearance="outline" floatLabel="never">
+        <input formControlName="purchaseOrder" matInput placeholder="Caption" id="purchaseOrder">
+        <mat-error *ngIf="orderForm.controls.purchaseOrder?.errors?.required">Field is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="0 1 100%" fxFlex.lt-sm="100%" class="no-margin">
+      <label for="deliveryNotes">Delivery notes</label>
+      <mat-form-field appearance="outline" floatLabel="never">
+        <textarea formControlName="deliveryNotes" matInput placeholder="Caption" id="deliveryNotes"></textarea>
+        <mat-error *ngIf="orderForm.controls.deliveryNotes?.errors?.required">Field is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex fxLayoutAlign="flex-end">
+      <button mat-button color="primary" mat-raised-button type="submit">Save order</button>
+    </div>
+
+  </form>
+</div>

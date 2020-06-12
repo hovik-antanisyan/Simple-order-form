@@ -1,0 +1,29 @@
+.container {
+  padding: 1rem;
+  margin: auto;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1919px) {
+    width: 1280px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    width: 960px;
+  }
+
+  @media screen and (max-width: 959px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, .5);
+}
