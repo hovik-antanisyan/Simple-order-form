@@ -3,6 +3,10 @@
 
   .mat-form-field-infix {
     border-top: none;
+
+    input {
+      margin-top: .25em;
+    }
   }
 
   &.mat-form-field-appearance-outline {

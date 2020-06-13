@@ -11,7 +11,7 @@
   >
     <div fxFlex="0 1 calc(50%-1rem)" fxFlex.lt-sm="100%">
       <label for="orderName">Order name</label>
-      <mat-form-field appearance="outline" floatLabel="never">
+      <mat-form-field appearance="outline">
         <input formControlName="orderName" matInput placeholder="Caption" id="orderName">
         <mat-error *ngIf="orderForm.controls.orderName?.errors?.required">Field is required</mat-error>
         <mat-error *ngIf="orderForm.controls.orderName?.errors?.minlength ||
@@ -22,7 +22,7 @@
 
     <div fxFlex="0 1 50%" class="no-margin" fxFlex.lt-sm="100%">
       <label for="purchaseOrder">Purchase order</label>
-      <mat-form-field appearance="outline" floatLabel="never">
+      <mat-form-field appearance="outline">
         <input formControlName="purchaseOrder" matInput placeholder="Caption" id="purchaseOrder">
         <mat-error *ngIf="orderForm.controls.purchaseOrder?.errors?.required">Field is required</mat-error>
       </mat-form-field>
@@ -30,7 +30,7 @@
 
     <div fxFlex="0 1 100%" fxFlex.lt-sm="100%" class="no-margin">
       <label for="deliveryNotes">Delivery notes</label>
-      <mat-form-field appearance="outline" floatLabel="never">
+      <mat-form-field appearance="outline">
         <textarea formControlName="deliveryNotes" matInput placeholder="Caption" id="deliveryNotes"></textarea>
         <mat-error *ngIf="orderForm.controls.deliveryNotes?.errors?.required">Field is required</mat-error>
       </mat-form-field>
